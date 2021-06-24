@@ -1,0 +1,16 @@
+		Macro													inline  function
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)  def  abc   stmt1 ; stmt2 ; stmt3 ; ......					1) inline   void  f1()
+													    {
+															stmt1;
+															stmt2;
+															stmt3;
+													    }
+
+2)  This  is  macro  definition								2)  This  is  inline function  definition
+
+3)  Macro  call  is  abc;									3) Function  call  is  f1();
+
+4) No  rules											4) Several  rules
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Both  macro  call  and  inline  function  call  leads  to  substitution   and  hence  both   are  fast  in  execution.
