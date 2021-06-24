@@ -1,0 +1,25 @@
+		inline   function										Normal  Function
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1)  inline  void   f1()										1)  void  f1()
+     {													     {
+     }													     }
+
+2)  It  must  be  a   small   function                                               2) It  can be small  or  large  function
+
+3) It must be void  function								3) It  may or  may not be void  function
+
+4) It  can  not  contain  for , while , do .. while ,				4) It  may contain all  of  them
+    switch and  goto  statements
+
+5) It can not contain static variables						5) It  may  contain  static  variables
+
+6) Substitution  takes  place  when  function  is  called               6) Branching  takes  place  when  function  is
+													     called
+
+7) It  is  processed  at  compile  time						7) It is processed  at   runtime
+
+8) Fast  in  execution   becoz  branching  is  eliminated		8) Slow  in  execution  due to branching
+
+9) exe  file  does  not  contain inline  function				9)  exe  file  contains  normal  function
+
