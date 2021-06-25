@@ -1,0 +1,40 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+CBR								CBV								CBA							CBCR
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Variable  is  sent  to  the         1) Value  is  sent  to  the  function        1) Address  is  sent  to  the		1) Variable  is  sent  to
+    function                                          Eg:  f1(25); --> Value  25  is  sent          function                                        the  function
+    Eg:  int  a = 25;                                       to  f1   function                               Eg : int  a = 25;                             Eg: int  a  = 25;
+           f1(a); ---> Variable  'a'											      f1(&a); ---> Address  of          f1(a); ---> Variable   'a'
+     is  sent  to  f1  function										      variable  'a'  is  sent  to  f1	       is  sent  to  f1  function
+															      function
+
+2) Formal  parameter is  reference  2) Formal  parameter is  variable   2) Formal  parameter  is  pointer  2) Formal  parameter  is
+    Eg :  void  f1(int  &x)                       Eg :  void  f1(int  x)                               Eg :  void  f1(int *x)                     constant  reference
+             {							       {                                                              {						Eg: void  f1(const  int&  x)
+	     }							       }							      }						       {
+																						       }
+
+3) Actual  parameter  is  variable   3) Actual  parameter  is  value,       3) Actual  parameter  is  address  3) Actual  parameter  is
+    Eg :  int  a = 25;				    variable  or  expression			   Eg : int  a = 25;                                  variable
+             f1(a);					    Eg :  f1(25);		                                          f1(&a);					       Eg:  int  a = 25;
+								    f1(a);														       f1(a);
+								    f1(a+b*c);
+
+4) int a = 25;					   4) int  a = 25;					4) int a= 25;					4)  int a = 25;
+    f1(a); ---> f1  function  can              f1(a);  ---> f1  function  can  not        f1(&a);  ---> f1  function can	      f1(a); --> f1  function
+    modify  value  of  variable  'a'        modify  value  of  'a'			    modify  value  of 'a'  thru		      can  not  modify  value
+    thru  reference												    pointer					      of  'a'  thru  reference
+																				     becoz  it  is  constant  reference
+
