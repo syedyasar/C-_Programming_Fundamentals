@@ -1,0 +1,18 @@
+		Static  Memory  Allocation(SMA)							Dynamic  Memory  Allocation(DMA)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Memory  is  allocated  at  compile  time					1) Memory  is  allocated  at   run  time
+
+2) Declarations  statements  perform SMA					2) new  operator  does  DMA
+
+3) int  x;												        3)  new  int , new  int[5] and  new  int *   create  variable ,
+    int  a[5];												     array  and  pointer  at  runtime
+    int  *p;
+    Variable , array  and  pointer  are  created at  compile
+    time
+
+4) Memory  is  allocated  from  stack							4) Memory  is  allocated  from  heap
+
+5) Compile  time  entities  have  names						5) Runtime entities  are  nameless
+
+6) Compile  time  entities  are  lost  after block				6) delete  operator  is  used  to  delete  runtime entities
+    terminates
