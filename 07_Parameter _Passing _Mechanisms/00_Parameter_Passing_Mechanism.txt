@@ -1,0 +1,6 @@
+Parameter  Passing  Mechanisms
+----------------------------------------------------------
+1) Call-By-Reference (CBR)
+2) Call-By-Value (CBV)
+3) Call-By-Address (CBA)
+4) Call-By-Constant-Reference (CBCR)
