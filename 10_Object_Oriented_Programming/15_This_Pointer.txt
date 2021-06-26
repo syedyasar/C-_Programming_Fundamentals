@@ -1,0 +1,52 @@
+this    pointer
+---------------------
+1) 'this'   points  to  owner  object  .  In  other  words,  'this'  is  nothing  but  address  of  owner  object
+
+2) It  is  initialized  by  OS  as  soon  as  member  function   is  called.
+
+3) Consider  function   call  :      a . f1();
+     'this'  points  to  object    'a'   becoz   function  f1  is  called  w.r.t.  object  'a'
+
+4) In  other  words,    'this'  is  &a  and  *this  is   object  'a'
+
+5) 'this'    is  a  keyword.
+
+6) 'this'  pointer    is    lost  as  soon  as  member  function   terminates.
+
+7) NMF  can  not  use  'this'   pointer   becoz   it  is  not  called  wrt  object
+
+8) main  function  can  not  use  'this'   becoz it  is  NMF
+
+9) 'this'    is    a   constant  pointer   hence  it  can  not  be  modified
+     this++  and  this--  are  invalid
+
+10) Consider  function  call  :   a . f1();
+       Let      object   'a'    contain  data  members  x  and  y,  f1   function  can  access   members  of  object    'a'    by
+       a)  this -> x      and    this -> y
+       b)  (*this) . x  and  (*this) . y
+       c)  x  and  y
+
+Advantages
+---------------------
+1) MF  can  use  Owner  object  name    indirectly  by    *this
+    Eg  :   a . m1();
+    Function  f1    can  not  use  object  name    'a'      directly   becoz   it    is  already  called  wrt  object  a.
+    i.e.  a . x  and  a . y  are  invalid  inside  f1   function
+    But   (*this) . x  and  (*this) . y  are  valid    (  and    *this  is  nothing  but  object  a)
+
+2) To  return  owner  object  from  MF ,  simply    return(*this)
+     Eg  :    a . f1()
+     Function f1   can  return  object    'a'      by      return    *this;
+     return  a;      is  invalid  inside    function  f1   becoz   f1  is  already  called  wrt  object  'a'
+
+3) If  data  member  and  parameter  have  same  name,  they  can  be  distinguished  by  this.
+    i.e.  Data  member   is  accessed  by  (*this) . member   and  parameter  is  accessed  by  parametername
+    Eg :  class  c1
+            {
+	          int  x;
+	          void  m1(int  x)
+		  {
+		       cout <<  this -> x;
+		       cout << x;
+		  }
+            };
