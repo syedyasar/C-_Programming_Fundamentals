@@ -1,0 +1,22 @@
+
+/*
+friend  function
+-------------------------
+1) NMF  can  use  private  members  of  a  class  provided  it  is  friend  to  the  class
+
+2)  friend is a keyword
+
+3) friend function has no scope i.e. neither  private nor  public
+
+4) Hence  it  can  be declared  inside  the  class under  private  or  public  scope
+
+5) It  is  not  called  wrt  object  becoz  it  is  NMF
+
+6) A  function  can  be  friend  to   multiple  classes
+
+7) MF  of  a   class   can  be  friend  to   a  different  class
+
+8) friend  function  must be  discouraged  becoz  data  hiding  is  lost
+
+9) Using  friend   function  is  not  a  good  idea
+*/
