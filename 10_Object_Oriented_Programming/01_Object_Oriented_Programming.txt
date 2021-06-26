@@ -1,0 +1,90 @@
+Object    Oriented    Programming  (OOPS)
+-------------------------------------------------------------------
+Class
+---------
+1) class  c1
+     {
+     };
+
+2) class  is  a  blueprint  or  description  of  an  object.
+
+3) class  is  a  keyword
+
+4) c1  is  classname  and  every  classname  is  a  datatype  i.e.  Abstract  Data  Type  (  ADT)
+
+5) class  is  a  collection  of  data  members  and  member  functions
+
+6) object  can  not  be  created  or  instantiated without  defining  the  class.
+     i.e.    Define  the  class    first  and  then  create  object.
+
+7) Defining  the  class  is  nothing  but  informing  system  about  members  of  the  class.
+     Data  members  and  member   functions   are  called  members
+
+
+Data  Member
+------------------------
+1) class  c1
+    {
+  	  int   a  = 25;
+      float  b = 10.8;
+	  char   ch = 'g';
+	  string   s = "Rama Rao";
+    };
+
+2) Data  member   is  a  variable  of  the  object.
+
+3) It  is  declared  inside  the  class  but  not  inside  function
+     Eg :  a , b , ch  and  s  are  data  members
+
+4) Every  c1  class  object  contains  4  members
+    c1   obj;  --->  object  obj  contains  members    a , b , c and  s
+
+5) They  are  accessed  by  obj . a , obj . b , obj . c   and  obj . s
+
+6) Data  members  can   be  initialized  inside  the  class   definition
+
+
+Member   Function
+--------------------------------
+1) It  is  used  to  perform  operations  on  object  like  reading  inputs  into  object , display  object , add  objects ,
+    compares  objects,.........
+
+2) Every  member   function  can  be   defined  inside  or  outside  class
+
+3) Member  function   must  be  called  wrt  object
+    Eg :  object . function();
+
+			Member  Function  inside  the  class				Member  Function  outside  the  class
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)  class  c1:											1)   class   c1
+     {													      {
+	public:													public:
+		void  f1()													  void  f1();
+		{											      };
+		}											     void   c1 ::  f1()
+     };													     {
+													     }
+
+2)  Function  prototype  is  not  required				      2)  Function  prototype is required   inside  the  class
+
+3) classname :: is  not  required  in  the  function header	      3) classname :: is  required  in  the  function header
+
+4) It  is   inline  function  by default					      4) Write  inline   explicitly  in  the  function  header
+													  otheriwse  it  is normal  function by default
+
+5) Small  functions  are usually  defined  inside  the  class       5) Large  functions  are  usually  defined outside  the class
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Object
+-----------
+1) It  is  an  instance  of  a  class
+
+2) cin  is  an instance of  istream  class and  cout  is  an instance of  ostream  class
+
+3) object  is  a  hetrogeneous  collection of  elements
+    i.e. object  can  contain  different  types  of  elements (int , float , char , string , ......)
+
+4) Memory  is  allocated  to  data  members   when  object  is  created
+
+5) size  of  an  object   is   sum  of  sizes  of  data  members
+
