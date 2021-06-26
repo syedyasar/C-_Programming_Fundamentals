@@ -1,0 +1,16 @@
+		Compile  Time  object									Runtime  Object
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)  How  to  create  compile  time  object ?					   1) How  to  create  run  time  object ?
+      ---> classname  object  ---->  c1   a						 ---> new  classname   ---->  c1  *p   =  new  c1;
+
+2)  Name  of  the  object  --->  'a'							2)  Name  of  the  object  --->  *p
+
+3) Address of  the  object  --->  &a								3)  Address of  the  object  ---> p
+
+4) How  to  access members  of  the  object ?				4)  How  to  access members  of  the  object ?
+     --->  a . x , a . y , a . ch									--->  p -> x , p -> y , p -> ch
+
+5) How  to  delete  object								5) How  to  delete  object  --->  delete  p
+     --->  automatically  lost  when  }  is   reached
+
+6) compile  time  object  resides in  stack  memory			6) Runtime  object  resides in  heap  memory
