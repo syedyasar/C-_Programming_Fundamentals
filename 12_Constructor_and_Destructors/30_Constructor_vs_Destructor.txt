@@ -1,0 +1,17 @@
+		Constructor											Destructor
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Name   is  same  as   class  name				             1) Name  is   ~classname
+
+2) It is  used  to  initialize data members of  the  object           2) It  is  used  to delete  resources  held  by  the  object
+
+3) It may  have parameters							     3) It can not have  parameters
+
+4) It can be overloaded								     4) It can  not  be  overloaded
+
+5) It is  executed as soon as  object  is  created			     5) It is  executed just before  object is lost
+    a) classname  object;									 a) }
+    b) new  classname;                                                                     b) delete  pointer;
+
+6) It  can  not be called  explicitly						    6) It  can be called explicitly
+    Eg : object . classname();  ---> Error						Eg: object . ~classname();
+
