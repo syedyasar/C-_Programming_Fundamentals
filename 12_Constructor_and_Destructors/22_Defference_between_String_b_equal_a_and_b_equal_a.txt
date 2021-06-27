@@ -1,0 +1,9 @@
+           String  b = a											b  = a
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Object  'b'  is  created   and   CC is  executed			1) No  object  is  created  and hence  no constructor  is
+                                                                                                     executed
+
+2) Resources held  by  object  'a'  are  copied  to                    2) Contents  of  object  'a'  are  copied  to  object  'b'
+    object  'b  due  to  CC
+
+3) b . s  and  a . s   point  to  different  strings		       3) a . s  and  b . s   point to same string
