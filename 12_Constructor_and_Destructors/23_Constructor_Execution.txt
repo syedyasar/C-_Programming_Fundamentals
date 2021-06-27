@@ -1,0 +1,12 @@
+1) int   a = 25;    --->  Constructor  is  not  executed  becoz  it  is  variable  initialization
+
+2) int   b[] = {10 , 20 , 30 , 40};   --->   Constructor  is  not  executed  becoz  it  is  array  initialization
+
+3) int  *p = &a;  --->  Constructor  is  not  executed  becoz  it  is  pointer   initialization
+
+4) Date  c(15 , 8 , 1947);  --->  Constructor  is  executed  becoz  it  is  object  initialization  and  Error  when  Date
+						class  does  not  contain  3-parameter   constructor
+
+Conclusion  :  Constructor  is  only  for  object  initialization  but  not  for  variable  and    array  initialization
+
+
