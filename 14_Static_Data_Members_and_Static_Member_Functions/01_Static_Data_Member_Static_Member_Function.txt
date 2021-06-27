@@ -1,0 +1,87 @@
+		Static  Data  Member                                                               Non static  Data  Member
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) class  c1										               1) class      c1
+    {													           {
+          static  int  x;								                		int  x;
+    };													           };
+
+2) It    is  represented  only  once  but  not  in  every  object     2) It  is  represented  in  every  object
+
+3) It  is  global  to  all  c1  class  objects			  	          3) It  is  local  to  each  c1  class  object
+
+4) Memory    is  allocated  to  member  'x'  outside			      4) Memory   is  allocated  to   member  x  when  object
+    the  class                                                                                               is  created
+    Eg :  int  c1  ::  x;										  	   Eg :  c1   a;
+
+5) It  is  accessed  thru  class  name					              5) It  is  accessed  wrt  object  only
+     i.e.  c1 .  x                                                                                            i.e. a . x
+
+6) No  instances  are  required  to  access  static  member               6) At  least  one  instance(object)  is  required
+     i.e. It  can  be  accessed  even  though  there  are  no  objects	   to   access  non-static  member
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Accessing  static   member    wrt  object  is  not  a  good  idea  becoz  we  are  losing  power  of  static  member
+
+1) When  same  value  is  to  be  represented  in  all  the  objects,  it  leads  to  data  redundancy(duplication).
+
+2) Therefore  static  member   is  used   as  an  alternative.
+
+3) Value  is  represented  only  once  in  static  member  and  all  the  objects  share  the  same  value.
+
+4) If  any  one  object  modifies  value  of  static  member,  changes  are  visible  to  other  objects
+
+Eg :  When  all  the  students  study  in  the  same  college,  representing  same  college  name  in  all  the
+        objects  lead  to  data  redundancy.  Therefore  college  name  is  declared   as  static   member  so  that  it  is
+        represented  only  once  and  all  the  students  share  same  college  name.
+						Roll  number  can  not  be  static  becoz   each  student  has  a  different  roll  number
+
+Advantages
+---------------------
+1) No  data  redundancy
+
+2) No  memory  wastage  becoz   value  is  represented  only  once
+
+3) Data  sharing  is  possible
+
+4) It can  be  accessed  without  any  instances
+
+
+		Static  Member  Function                                            Non  Static  Member  Function
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) class      c1											1) class    c1
+     {													    {
+          public:												  public:
+		 static  void  f1()										   void  m1()
+		 {												           {
+		 }												           }
+     };											                    };
+
+2) It  is  called  thru  classname						      2) It  is  called  wrt  object
+     i.e.  classname . function();		                  			   i.e.  object . function();
+     Eg :  c1 . f1();					            		                   Eg :  obj . f1();
+
+3) No  instances  are  required  to  call  the  function	  3) At  least  one  instance  is  required  to  call  the  function
+     i.e.  It  can  be  called  even  though  there  are  no  objects      i.e.  It  can  not  be  called  when  there  are  no  objects
+
+4) It  can  not  use  this  becoz   it  is  called            4) It  can  use  this  becoz  it   is  called  wrt  object
+     thru  classname
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Static  function  can  use  non-static  data  member   and    Non-static   fumction  can  use  static  data member
+     i.e.    Any   function  can  use  any   data  member
+
+2) static  function   can  call  non-static  function  and  vice-versa
+
+3) To  call  static  function  of  a  different  class,  classname  prefix  is  mandatory
+     i.e.  classname . function();
+
+4) To  call  static  function  of  same    class,  classname  prefix  is  optional
+     i.e.  classname . function();  --->  Okay
+                                  function();  ---->  Okay
+
+5) To  acces  static  member    of  a  different  class,  classname  prefix  is  mandatory
+     i.e. classname . datamember
+
+6) To  acces  static  member  of  same  class,  classname  prefix  is  optional
+     i.e.  classname . member   ----> Okay
+                                  membe    ----> Okay
+
+
