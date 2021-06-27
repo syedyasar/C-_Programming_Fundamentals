@@ -1,0 +1,16 @@
+                          Member  Function								Constructor
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Function  name  can  not    be  same  as  class  name	1) Constructor  name  must  be  same  as  class  name
+
+2) Return  type  is  mandatory,  at  least  void		    2) There  is  no  return  type  ,  not  even  void
+
+3) It  must  be  called  explicitly  by  programmer	        3) It  is  automatically  executed  when  object  is  created
+    i.e. It  is  not  executed  unless  it  is  called
+
+4) It  may   contain   return  statement					4) It  can  not  contain   return  statement
+
+5) It  is  used  to  perform  any  opeartion  on  object    5) It  is  used  to  initialize  object  only
+    such  as  reading  object,  printing  object,  adding
+    objects,  comparing  objects,  initializing  object
+    and  so  on
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
