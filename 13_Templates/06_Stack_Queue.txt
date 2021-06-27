@@ -1,0 +1,68 @@
+Stack
+-----------
+1) Insertion and deletion are made at only one end(usually from top end),
+    Hence stack is called LIFO(Last In First Out)
+2) Last inserted element is first deleted
+    Eg: Insert 10,20,30,40 into the stack.
+          They are deleted in reverse order ie 40,30,20,10
+3) We are implementing stack by using array
+4) 'top' is subscript of last element in the stack
+5) Initial value of top is -1
+6) top++ for insertion, top-- for deletion
+7) Insertion is called push,deletion is called pop
+8) s[top] is last element(or top most element) of the stack where 's' is an array
+9) top==size-1 ----> stack is full
+10) top==-1 ----> stack is empty
+
+
+
+Queue
+---------
+1) Insertion and deletion are made at opposite ends
+    i.e. insertion from rear end and deletion from front end
+2) Hence queue is called FIFO ie First inserted element is first deleted
+3) We are implementing queue by using an array
+4) f and r are subscripts of first and last elements
+5) Initial values are f=0,r=-1
+6) a[f] and a[r] are first and last elements
+7) f<r  ----> queue contains more than one element
+    f=r  -----> queue contains single element
+   f>r ----> queue is empty
+8) stack insertion and queue insertion are same but deletion differs
+9) top and r are same i.e. their roles are same
+
+Insertion
+------------
+case 1 : if r=size-1, insertion is not possible, but it doesn't mean that queue is full
+case 2 : If queue contain at least one empty on right side, increment r by 1 and insert new element
+at a[r]
+
+Deletion
+------------
+case 1: If queue is empty(r=-1), deletion is not possible
+case 2: If queue contain single element(f=r), reinitialize f=0,r=-1 as queue is empty after
+deletion of single element
+case 3 : If queue contain more than one element, increment f by 1 so that first element is
+deleted(logically)
+
+Disadv of linear queue
+-------------------------------
+If queue contain empty,empty,30,40 and size is 4,
+New element 50 can not be inserted as insertion is from right side but empty locations are on left side.
+Therefore 2 empty locations on left side are wasted.
+Therefore use circular queue to avoid mem wastage
+
+			stack															queue
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Insertion and deletion are made at only one end			1) Insertion and deletion are made at
+    i.e. usually at top end			 				     opposite ends i.e Insertion at rear end and deletion
+															    at front end
+2) Therefore stack is LIFO								2) Therefore queue is FIFO
+3) top will keep tack of last element						3) f and r keep track of first and last elements
+4) Initial value is top=-1									4) Initial values are f=0 and r=-1
+5) top==size-1 ----> stack is full							5) r == size-1 ---> insertion is not permitted
+6) top == -1 ----> stack is empty							6) r == -1 ---> queue is empty
+7) top++ for insertion									7) r++ for insertion
+8) top-- for deletion										8) f++ for deletion
+9) s[top] is last element									9) a[f] and a[r] are first and last elements
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
