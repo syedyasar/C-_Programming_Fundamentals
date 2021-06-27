@@ -1,0 +1,19 @@
+Resource
+----------------
+1) It  is  not  a  part  of  the   object
+    i.e. It  exists  some  where  in  memory  and  object  contains  a   pointer  to  it
+
+2) Variable ,  Array , string  and  another  object  can  be  resources
+
+			Without  CC											                      With  CC
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) String  b = a;										                     1) String  b  =  a;
+    Contents of  object  'a'  are  copied to  object  'b'			            String  held  by  object  'a'  is   copied  to  object  'b'
+    i.e. Address  and  length  in  object  'a'  are  copied			            i.e. Both  string and length  in  object  'a'  are
+    to  object  'b'										                        copied  to  object  'b'
+
+2) Both a . s and b . s point to  same  string                               2) a . s  and b .  s  point  to  different  strings
+    i.e. Both  the  objects  a  and  b  share  same  resource                    i.e. Objects  a   and  b  have  differnet  resources
+
+3) If  at  least  one  object  is  lost, other object  resource	             3)  Even  though one object is lost , other  object
+    is  also  not  available	                					              resource  still  exists
