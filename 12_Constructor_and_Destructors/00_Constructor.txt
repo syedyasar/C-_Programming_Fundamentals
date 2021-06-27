@@ -1,0 +1,35 @@
+
+Constructor
+-------------------
+1) It  is  a  special   member  function  of  the  class.
+
+2) It  is  used  to  initialize  data  members   of  the  object  i.e.  object  initialization
+
+3) It  is  automatically  executed  as  soon  as  object  is  created.
+
+4) Function   is  not  executed   unless  it  is  called   but  constructor  is    automatically   executed  as  soon  as
+    object  is  created
+
+Rules
+----------
+1) Name  of  the  constructor   is  same  as  classname.
+    Eg :  If  classname  is  Date,  constructor  name  is  also  Date
+
+2) It  has  no  return  type,  not  even  void
+
+3) It  can  not  contain  return  statement.
+
+4) It  may  or  may not  have  parameters
+
+5) It  can  not  be  friend  to  any  other  class
+    i.e.  friend  function  exists   but  not  friend  constructor
+
+Constructor  overloading
+-----------------------------------------
+There  are  3  types  of  constructors
+1) No  Argumnet  Constructor(NAC)  or  Default  Constructor (DC)
+
+2) Parameter  Constructor(PC)
+
+3) Copy  Constructor(CC)
+
