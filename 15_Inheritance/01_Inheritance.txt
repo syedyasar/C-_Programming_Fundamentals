@@ -1,0 +1,45 @@
+Inheritance
+-------------------
+1) If  a  class  is  acquiring  properties  of  a  different  class,  it  is  known  as  inheritance.
+
+2) class    c2 : public  c1
+    {
+    };
+
+3) class  c2  is  derived  from  class  c1.
+
+4) Members(i.e. data  members  and   member  functions)  of  class  c1  are  inherited  to  class  c2.
+
+5) class  c2  contains  all  the  features  of  class  c1  and  new  features.
+
+6) class  c2  is  an  extension  of    class  c1.
+
+7) :  operator   is  used  to  inherit  a  class.
+
+8) class  c1  is  called  parent  class , super  class , base  class  or  old  class.
+   class  c2  is  called  child  class  , sub  class , derived  class  or  new  class.
+
+9) Inheritance  is  used  to  add  new  features  to  an  existing  class  without  explicitly  modifying  it.
+    Thus  a   class  can  be   enhanced  by  using  inheritance
+
+10) Let  class  c1  contains  3  data   members  and  4   member   functions  and
+      class  c2  contains  5  data  members   and  6  member  functions,
+      class  c2  on  the  whole  contains  3 + 5 = 8  data  members  and  4 + 6 = 10  member  functions
+
+11) Inheritance  is  from  class  to  class  but  not  from  object  to  object.
+      i.e.  When  child  object  is  created,  contents  of  parent  object  are  not  copied  to  child  object
+
+12) public  and  protected  members  are  inherited  but  not  private  members
+
+13) constructors  are  not  inherited  becoz  child  class  name  and  inherited  constructor  name  are  different
+
+14) If  parent  class  and  child  class  contain  members  with  same  name,  they  are  distinguished    by   using
+      classname ::
+
+15) Parent   class  functions  are  called    wrt  parent  object  and  both  child  and  parent   functions  are  called
+      wrt  child  object.
+
+16) Let    parent  class  contains  3  functions  and  child  class  contain  5  functions,
+      Parent  p;
+      Child   c;
+      We  can  call  only    3  functions  wrt  object    'p'  and  3 + 5 = 8  functions wrt  object    'c'
