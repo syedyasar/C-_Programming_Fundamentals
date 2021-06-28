@@ -1,0 +1,106 @@
+Access  modifier
+---------------------------
+There  are  3  scopes  in  a  class.
+1)  private
+2)  protected
+3)  public
+
+private
+------------
+1)  class  parent
+     {
+           private:
+		  int  x;  ----->  'x'  is  private  data  member
+	          void  f1()  --->  f1  is  private  function
+	          {
+	          }
+     };
+
+2) private  members  are  visible  to  same  class  and  hidden  from  every  other  class  including      child  class.
+
+3) They  are  also  hidden  from  NMF's
+
+4) A  class  can  not  use  private  members  of  a  different  class  directly.
+
+5) Similarly, NMF  can  not  use  private  members  directly
+
+6) However  private  members  can  be  accessed  indirectly  through    public  function
+    i.e. call  public  function  of  a  class    and    it   inturn  uses  private  members  of  same  class.
+    This  is  known  as  indirect  access  or  usage
+
+7) private  members  are  inherited  to  child  class  but  child  class  can  not  use  them  directly  becoz   they
+    are  not  visible  to  child  class
+
+8) Therefore  child  class  should    call  public  functions  of  parent  class  in  order  to  use  private  members
+    of    parent  class  i.e.  indirect  access
+
+9) Data  members  are  usually  private  when  there  is  no  child  class.
+
+10) Advantage  of  private  data  members  is  data  hiding
+      i.e.  Contents  of  the  object  is  hidden  from  other  classes  and  NMF's
+
+11) If  object  contains  password,  account  balance  and  so  on,  they  must  be  private
+
+
+protected
+-----------------
+1) class  parent
+    {
+	 protected:
+                    int  x;  --->  'x'  is  protected  data  member
+	            void   f1()  -->  f1  is  protected    function
+	            {
+	            }
+     };
+
+2) protected    members  are  visible  to   same  class  and  child  classes
+
+3) They  are  hidden  from  other  other  classes  and  NMF's
+
+4) They  are  inherited  to  child  class  and    child  class  can    use  them  directly
+
+5) child  class  can  use  protected    members  of  parent  class  directly
+
+6) Data  members  are  usually  protected    when  there  is  a  child  class.
+
+public
+-----------
+1) class  parent
+    {
+	  public:
+		 int  x;  ---->  'x'  is  public  data  member
+	         void  f1()    ---->  f1  is  public  function
+	         {
+	         }
+    };
+
+2) public  members  are  visible  to  all  the  classes
+
+3) They  are  not    hidden  from  any  class  and  function
+    i.e.  They  are  exposed  to  all  the  classes  and  functions
+
+4) public      members  are  inherited  to  child  class  and    child  class  can    use  them    directly.
+
+5) functions  are  usually  public  so  that  they  can  be  called  by  other  classes  and  NMF
+
+6) Hide  data  but  not  functions
+
+Note  :
+class    c1
+{
+}
+class  c2  :  public  c1
+{
+}
+class  c3
+{
+}
+main()
+{
+}
+
+1) private  members  of  class  c1  can  be  used  by  c1  class  only
+
+2) protected   members  of  class  c1  can  be  used  by  classes  c1 and  c2  but  not  by  c3  and  main
+
+3) public  members  of  class  c1  can  be  used  by  classes  c1 , c2  , c3  and  main  function
