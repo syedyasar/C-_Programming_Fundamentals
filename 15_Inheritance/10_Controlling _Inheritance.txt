@@ -1,0 +1,19 @@
+Controlling  Inheritance  (or) Visibility  Mode
+--------------------------------------------------------------------------
+1) private  inheritance
+    Eg :  class   Child  :  private Parent
+            {
+            };
+2) protected   inheritance
+    Eg :  class   Child  :  protected  Parent
+            {
+            };
+3) public    inheritance
+    Eg :  class   Child  :  public   Parent
+            {
+            };
+
+Note:  class  Child : Parent  ---> Default  is  private  inheritance
+           {
+           };
+
