@@ -1,0 +1,165 @@
+Types  of  inheritance
+------------------------------------
+1) Simple or  Single    Inheritance
+
+2) Multilevel  Inheritance
+
+3) Multiple  Inheritance
+
+4) Hybrid  inheritance
+
+5) Hierarchial  Inheritance
+
+6) Multipath  Inheritance
+
+Simple  or  Single    Inheritance
+----------------------------------------------------
+1)  class  c1
+     {
+           int  a , b;
+     };
+     class  c2 :  public  c1
+     {
+          int  c , d;
+     };
+
+2) If  there  is  single  parent  class  and  single  child  class,  it  is  known  as  simple  inheritance.
+
+3) Class  c2  is  derived  from  class  c1
+    i.e.  members  of  class  c1  are  inherited  to  c2
+
+4) Members    of  class  c1  are  a  and  b  and    members  of  class  c2  are  a , b , c , d  where  a  and  b  are
+    inherited  from   class  c1.
+
+Multilevel  Inheritance
+-------------------------------------
+1) class  c1
+    {
+      	int  a , b;
+    };
+    class  c2  : public  c1
+    {
+      	int  c , d;
+    };
+    class  c3 : public  c2
+    {
+      	int  e , f;
+    };
+    class  c4  : public  c3
+    {
+      	int  g , h;
+    };
+
+2) If  there  is  more  than  one  level  of  inheritance,  it  is  known  as  multilevel  inheritance.
+
+3) There  are  3  levels
+     i.e.  c1  to  c2 , c2  to  c3  and   c3  to  c4.
+
+4) class  c4  is  derived  from  c3 ,  c3   from  c2  and  c2   from  c1.
+
+5) c4's  direct  parent  class  is  c3    and    indirect  parent  classes  are  c2  and  c1.
+
+6) class  c4  contains  members  of  c1 , c2 , c3  and  new  members.
+
+7) class  c1  contains  a , b
+    class  c2  contains  a , b , c , d
+    class  c3  contains  a , b , c , d , e , f
+    class  c4  contains  a , b , c , d , e , f , g , h
+
+8) B  lang  is  extended  to  C  lang,  'C'   is  extended  to  C++   and  C++   is  extended  to  VC++
+
+Multiple  inheritance
+-----------------------------------
+1) class  c1
+    {
+         int  a , b;
+    };
+    class  c2
+    {
+	 int  c , d;
+    };
+    class  c3
+    {
+         int  e , f;
+    };
+    class  c4 : public c1 , public  c2  , public  c3
+    {
+          int   g , h;
+    };
+
+2) If  a  class  is  derived  from  multiple  classes,  it  is  known  as  multiple  inheritance.
+
+3) class  c4  is  derived  from  classes  c1 , c2  and  c3
+
+4) class  c4  contains  members  of  c1 , c2 , c3  and  new  members.
+
+5) class  c1  contains  a , b
+    class  c2  contains  c , d
+    class  c3  contains  e , f
+    class  c4  contains  a , b , c , d , e , f , g , h
+
+Hybrid  inheritance
+--------------------------------
+1) class  c1
+    {
+	int a , b;
+    };
+    class  c2  : public   c1
+    {
+	int c , d;
+    };
+    class  c3
+    {
+	int e , f;
+    };
+    class  c4 : public  c2  ,  public  c3
+    {
+	int g , h;
+    };
+
+2) Multilevel  Inheritance  +  Multiple  Inheritance  =  Hybrid  inheritance
+
+3) classes  c1 , c2  and  c4  form  multilevel  inheritance.
+
+4) classes  c2 , c3  and  c4  form  multiple  inheritance.
+
+5) class  c1  contains  a , b
+    class  c2  contains  a , b , c , d
+    class  c3  contains  e , f
+    class  c4  contains  a , b , c , d , e , f , g , h
+
+
+Hierarchial  inheritance
+----------------------------------------
+1) class  c1
+    {
+         int  a , b;
+    };
+    class  c2  :  public  c1
+    {
+         int  c , d;
+    };
+    class  c3 : public  c1
+    {
+         int  e , f;
+    };
+    class  c4  : public  c1
+    {
+         int  g , h;
+    };
+
+2) If  multiple  classes  are  derived  from  same  class,  it  is  known  as  Hierarchial  inheritance.
+    Eg : classes  c2 , c3  and  c4  are  derived  from  same  class  c1.
+
+3) In  otherwords , if  there  is  more  than  one  child  class,  it  is  known  as  Hierarchical  inheritance.
+
+4) Members  of  class  c1  are  inherited  to  classes  c2 , c3  and  c4
+
+5) class  c1  contains  a , b
+    class  c2  contains  a , b , c , d
+    class  c3  contains  a , b , e , f
+    class  c4  contains  a , b , g , h
+
+6) Hierarchial  inheritance  is  quite  opposite  to  multiple  inheritance
+    i.e. There  are  multiple  parent  classes  in  multiple  inheritance   and   multiple  child  classes   in  hierarchial
+    inheritance
