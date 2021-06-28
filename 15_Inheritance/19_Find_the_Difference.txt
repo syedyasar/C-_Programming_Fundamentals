@@ -1,0 +1,9 @@
+What   is  the   difference  between  the  following ?
+-------------------------------------------------------------------------------------------
+class   c3 :  public  c1  ,  c2  --->  c2   is  private  inheritance
+{
+};
+
+class   c3  :  public  c1 , public   c2  --->  c2   is  public   inheritance
+{
+};
