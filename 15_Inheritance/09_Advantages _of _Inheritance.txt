@@ -1,0 +1,81 @@
+Advantages  of  inheritance
+----------------------------------------------
+1) Code  Reusability
+     ----------------------------
+    Parent  class  code(i.e.  functions)  can  be  reused  by  child  class.  Don't  rewrite  parent  class  code  again  in
+    child  class.
+    i.e.  Reuse  the  code  but  not  rewrite
+    Eg  1 : child  class  get   function  can  call  parent  class  get  function   in  order  to  read  inherited  members
+    Eg  2 : Similarly  child  class  disp  function  can  call    parent  class  disp  function  to  print  inherited  members
+    Eg  3 : If  parent  class  f1  function  contains  100  stmts  and    child  class  f1  function  require  150  stmts,
+              where    first  100  statements  are  same  as  that  of  parent  class  function.
+	      Therefore  child  class    f1  function   calls  parent  class  f1   function  for  first  100  stmts  and
+              we  need  to  write  only   additional  50    stmts  in  child  class  f1   function
+
+2) Time  and  money  are  saved
+    -------------------------------------------------
+    Due  to  reusability  of  code,  time  and  money  are  saved.
+    Don't  start  from  scratch  while    designing  child  class
+    i.e    Design  of  child    class  starts  from  that  stage    where  parent  class  is  left  off  and  then  new
+    features  are  added      to  child      class.
+    Eg :  C++  design  starts    from  where  c  language  is  left    off
+    Eg :  Windows  10  design    starts    from  where  windows  8    is  left  off
+
+3) Extensibility
+    ---------------------
+    class  c1
+    {
+          3  data  members
+          4  functions
+    };
+    class  c2  :  public  c1
+    {
+           5  data  members
+           6  functions
+    };
+    class  c2  is  an  extension  of  class  c1
+    i.e. class  c2  contains  all  the  features  of  class  c1  and  new  features.
+    class  c2  contains  3 + 5 = 8  data  members  and   4 + 6 = 10  member  functions
+    Thus  a  class  can  be  extended  by  using  inheritance
+    Eg 1 :  C++    is  an  extension  of   C  language
+    Eg 2 :  Windows  10    is  an  extension  of  windows  8
+    c1  a;
+    c2  b;
+    Type  of  object    'b'  is  c2  and  c1  ( becoz   c2  is  an  extension  of  c1)  but    type  of  object  'a'  is  only  c1
+
+4) Reliability
+    ----------------
+    We  can  rely  on  parent  class  while  designing  child  class(becoz  parent  class  is  an  existing  class).
+    Child  class  fucntions must  be  tested  for  their  functionality  becoz  they  are  newly  added  to  the  class.
+    But  parent  class  functions need  not  be  tested  becoz   it  is  an  existing  class
+
+5) Parent  class  pointer  can  point  to  child  class  object  but  child  class  pointer   can  not  point  to  parent
+    class  object
+    Eg :  Parent  *p =  new  Child;  ---->  Ok   becoz   parent  class   pointer   can  point  to  child  object
+          Child   *c = new  Parent;  --->  Error  becoz    child  class  pointer  can  not  point  to  parent  object
+    A  class  pointer  can  not  point  to  a  different  class  object
+    i.e.    c1   *p = new    c2 ;  ---->  Error  becoz  c1  class  pointer  can  not  point  to  c2  class  object
+
+6) Function  overriding
+    --------------------------------
+    If  we  are  not  happy  with  any  parent  class  function, it  can  be  modified  by  child  class.
+    This  modification  is  called  function  overriding
+
+Disadvantages:
+--------------------------
+1) Execution  is  slow  due  to  indirection
+    Eg :  Child  c;
+            c . f1()  --->  If  there  is  no   f1  function  in  child  class,  parent  class  f1  is  executed
+
+2) Improper  use  of  inheritance  may  lead  to  wrong  solutions.
+
+3) Often,  parent  class  functions   are    left  unused  by  child  class,  which  lead  to  memory  wastage.
+    Eg:  If  parent  class  contains  10  functions  but  child  class  uses  only  6  functions,  remaining  4
+           functions      are  left  unused.  It  leads  to  memory  wastage
+
+4) Parent  and  child    classes    are  tightly  coupled
+    i.e  They  are  dependent  on  each  other.
+    A  change  in  parent    class  will  affect  all  the  child  classes.
+    Eg : If    parent  class  contains  f1  function,  child  class  calls  parent  class  f1  function.
+           If  parent  function  name  f1      is  modified  to  f2,  modify  function  call  in  child  class
+           i.e.   Parent :: f1()  should  be  modified  to  Parent :: f2();
