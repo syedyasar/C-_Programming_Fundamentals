@@ -1,0 +1,12 @@
+Typecasting  of  object
+----------------------------------------
+1) Conversion  of  standard  type  to  class  type (By   using  constructor)
+
+2) Conversion  of  class  type  to  standard  type (By  using  operator datatype  function)
+
+3) Conversion  of  class  type  to  differnet  class  type (By  using  constructor)
+
+Note:
+1) Standard  types  are  int , float , char , string , .....
+
+2) Class  types  Complex , Rat , Date , Vector , .....
