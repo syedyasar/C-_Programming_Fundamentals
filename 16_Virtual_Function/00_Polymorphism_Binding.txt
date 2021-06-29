@@ -1,0 +1,57 @@
+Polymorphism
+------------------------
+1) When  same   function  is  behaving   differently  in  parent   and  child   classes,  It  is  known  as  Polymorphism
+
+2) f1  function  of   parent  class  does  an  operation  and
+    same  f1  function  of  child  class  does  a   different  operation.
+    This  is  known  as  polymorphism
+
+Types  of   Polymorphism
+-----------------------------------------
+1) Compile  Time  Polymorphism
+    a) Function  Overloading
+    b) Operator  Overloading
+
+2) Runtime  Polymorphism
+    a) Dynamic Binding  and Virtual Function
+
+Binding
+-------------
+1) Every  function  is  in  memory  at  an  address
+
+2) Address  of  the  function  is  substituted  whereever  function  is  called.
+
+3) This  is  called  Linking  or  Binding  and  it  is  done by  linker
+
+4) Let  f1  function  be  in  memory  at  addess  1000  and  1000  is  substituted  whereever  f1  function  is
+    called.
+    Eg :   f1();    ---->  1000
+
+5) It  is  linker  which  substitutes  address  1000  and  OS  branches  to  memory  address  1000  and
+     executes   f1    function
+
+6) Called  function  address  is  substituted  in  calling  function.  In  otherwords,  called  function  is   linked
+     to  calling  fucntion
+
+Types  of  Binding
+------------------------------
+1) Static  Binding  (or)  Early  Binding
+
+2) Dynamic  Binding  (or)  Late  Binding
+
+		Static  Binding										         Dynamic  Binding
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Binding  is  made  at   compile  time						1) Binding  is  made  at  run time
+
+2) Static  binding  is  made  for  normal  functions			2) Dynamic  binding is  made  for  virtual  functions
+
+3) Normal  function  is  called  wrt  object  (or)  pointer     3) Virtual  function  is  called  through  pointer
+    Eg: obj . function();									    Eg : ptr -> function()
+          ptr -> function();
+
+4) Type  of object  or  pointer  plays  a  keyrole  in		    4) Where  pointer  points  plays  a key role in  execution
+    execution  of  function                                        function
+
+5) Function  execution  is  fast  becoz  binding  is  already	5) Function  execution is  slow  becoz  binding  is  yet
+    made  at  compile  time								           to  be  made
+
