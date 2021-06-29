@@ -1,0 +1,67 @@
+
+Operator  Overloading
+---------------------------------------
+1) If same  operator  does  multiple  operations,  it  is  known  as  operator  overloading
+
+2) int  a;
+    cin >> a;  --->  Reads  input  to  variable
+
+3) int  a = 25;
+    a = a >> 3; --->  shift  right  3  times
+
+4) Rat   a;
+    cin >> a;  --->  Reads  inputs   to  object
+
+5) Thus  same  >>  operator  does   3  different  operations
+
+6) variable + variable ,  variable * variable ,  variable >  variable ,  variable == variable ,  variable++ ,  variable-- , cin >> variabe,
+    cout << variable ,  ......  are  valid
+
+7) Most  of  the  operators  can  be  used  between   variables
+
+8) object + object ,  object * object ,  object >  object ,  object == object ,  object++ ,  object-- , cin >> object,
+    cout << object ,  ......  are  invalid
+
+9) Most  of  the  operators  can  not  be  used  between   objects
+
+10) object . member , sizeof(object) , &object, object1 = object2 ,  ...  are  valid
+
+11) C++  provides  a  special  function operator  op()   so   that  operators  can  be  overloaded  on  objects
+
+12) object + object  is  valid   provided  +  is  overloaded  on objects
+
+13) Every  operator  can  be  overloaded  except  following:
+       a) Scope  Resolution Operator (::)
+       b) Conditional  Operator (? :)
+       c) sizeof  operator
+       d) Member access  operator (.)
+       e) Pointer to member operator (.*)
+
+14) The  original  functionality  is  not  lost  when  operator  is  overloaded.
+       i.e.  Variables  can  be  still  added  when  +  is  overloaded  on  objects
+
+15) We  can  change  the  meaning  of  the  operator  during  overloading  process
+       i.e.  objects  can  be  subtracted  in operator +  function  and  object + object  leads  to subtraction  results
+
+Advantages  of  Operator  overloading
+------------------------------------------------------------------
+1) Function  calls  are  simple  and  readable
+    Eg1 :  a + b  is  a  simple  function  call   compared  to   c . add(a , b)
+    Eg2 :  cin >> a   is  a  simple  function  call   compared  to  a . get()
+
+2) Coding  is  reduced
+     Eg :  temp1 . add(a , b);
+             temp2 . add(c , d);
+             e . add(temp1 ,  temp2);
+			The  above  3  statements  can  be  reduced  to  single  statement  e = a + b + c + d
+Note:
+1)  Binary  operators  can  be  overloaded  as  MF  or  NMF.
+     NMF   has  2   parameters  and   MF  has  single  parameter
+
+2)  Unary  operators  can  be  overloaded  as  MF  or  NMF.
+     NMF   has  1   parameter  and   MF  has  single   parameter
+
+3) Special  operators  can  be  overloaded  as  MF  only
+     Eg :  = , [] , () , new ,  delete  , ......
+
+4)  >> and <<  can  be  overloaded  as  NMF  only
